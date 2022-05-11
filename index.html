@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        <button onclick="setLocalStorage('username', 'Nazmul')">Set local Username  here</button>
+    </p>
+
+    <p>
+        <button onclick="getLocalStorage('username')">Get local username here</button>
+    </p>
+
+    <p>
+        <button onclick="setLocalStorage('name', 'Naeem Islam')">Set local name here</button>
+    </p>
+
+    <p>
+        <button onclick="getLocalStorage('name')">Get local name here</button>
+    </p>
+    <p>
+        <button onclick="removeLocalStorage('name')">Remove local name here</button>
+    </p>
+    <p>
+        <button onclick="clearLocalStorage()">Clear local name here</button>
+    </p>
+
+
+    <script>
+        function setLocalStorage(key, value){
+            localStorage.setItem(key, value);
+
+        }
+        function getLocalStorage(key){
+            alert(localStorage.getItem(key));
+
+        }
+        function removeLocalStorage(key){
+            localStorage.removeItem(key);
+
+        }
+
+        function clearLocalStorage(){
+            localStorage.clear();
+
+        }
+    </script>
+</body>
+</html>
